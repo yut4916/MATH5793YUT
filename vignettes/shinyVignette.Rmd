@@ -1,0 +1,31 @@
+---
+title: "shinyVignette"
+author: "Katy Yut"
+date: '`r format(Sys.Date(),format="%A, %B %d, %Y")`'
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{shinyVignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH5793YUT)
+```
+
+# Disclosure
+This is my first ever vignette, documenting a function that runs my first ever shiny app. I don't really know if I'm doing everything correctly, and I keep running into frustrating errors, but little by little I'm figuring it out. 
+
+# myfirstShiny()
+This function simply calls my shiny app, which should open in a browser to reveal an interactive webpage. The plots use the data from Table 4-3 in the Johnson & Wichern *Applied Multivariate Statistical Analysis* (6th ed.) textbook, which I have included in my MATH5793YUT package for (hopefully) easy use. 
+
+To address Task 1, I have created a scatterplot with widgets for selecting both variables, as well as the size and color of the points. When a point on the plot is clicked, text is printed below the plot, showing both the original correlation and the correlation if the selected point were removed (i.e. the "drop-one correlation"). 
+
+To address Task 2, I have a very similar setup to Task 1. The same widgets for selecting the two variables are repeated. However, the Task 2 scatterplot has a widget for $\theta$, the angle of rotation for the new axes. Additionally, the Task 2 plot prints the value for $\tilde{s_{12}}$, updating as the user changes the value of theta. There is a grey dashed line indicating the value of theta for which $\tilde{s_{12}} = 0$, where we have independence between the two selected variables. This value of theta is also printed in grey in the bottom right corner of the plot. 

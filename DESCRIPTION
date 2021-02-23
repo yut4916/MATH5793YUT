@@ -4,9 +4,20 @@ Title: Package for Advanced Applied Stats
 Version: 0.1.0
 Author: Katy Yut
 Maintainer: Katy Yut <katherine.yut@ou.edu>
-Description: Package for class functions and such
+Description: This contains R functions and documentation for projects in MATH 5793.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/yut4916/MATH5793YUT
 BugReports: https://github.com/yut4916/MATH5793YUT/issues
+RoxygenNote: 7.1.0
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    rootSolve,
+    graphics,
+    shiny
+Depends: 
+    R (>= 2.10)
