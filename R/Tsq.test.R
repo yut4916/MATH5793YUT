@@ -8,6 +8,7 @@
 #' @export
 #'
 #' @examples Tsq.test(data=data.frame(rnorm(50), rnorm(50)), mu0=c(-0.5, 1.2))
+#' @importFrom stats cov qf
 Tsq.test <- function(data, mu0, alpha=0.05){
   # data = data.frame with p variables and n observations
   # mu0 = numeric vector, length p
